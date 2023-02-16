@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css"  rel="stylesheet" />
+    <script src=”https://cdn.tailwindcss.com”></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
+    
+    <title>Receipt</title>
+</head>
+<body>
+    
+    <nav class="bg-red sm:px-4 py-2.5 mx-auto">
+        <div class="flex flex-wrap items-center justify-between mx-auto">
+          <a href="/" class="flex items-center">
+              <img src="img/logo.png" alt="/" />
+          </a>
+          <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+            <svg class="w-6 h-6" aria-hidden="true" fill="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          </button>
+          <div class="hidden cta w-full md:block md:w-auto" id="navbar-default">
+            <ul class="flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
+              <li>
+                <a href="#" style="color:white;" class="block py-2 text-white font-bold text-lg md:hover:bg-transparent md:border-0">BERIKAN UNDI ANDA</a>
+              </li>
+              <li>
+                <a href="#" style="color:white;" class="block py-2 text-white font-bold text-lg md:hover:bg-transparent md:border-0">TERMA DAN SYARAT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <div class="flex items-center justify-center px-5 py-5">
+        <div class="bg-gradient w-full" style="max-width:800px; max-height:500px">
+            <div class="md:flex w-full items-center justify-center">
+                <div class="w-full py-3 px-4 rounded-lg">
+                    <div class="text-center mb-10 px-5">
+                        <p class="font-bold text-3xl text-gray-900">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex -mx-3">
+                            <div class="w-full px-2 mb-5">
+                                <div class="flex">
+                                    <input type="text" class="w-full pl-10 pr-3 rounded-lg border-2 border-gray-200" placeholder="Name" required>
+                                </div>
+                            </div>
+                            <div class="w-full px-2 mb-5">
+                                <div class="flex">
+                                    <input type="text" class="w-full pl-10 pr-3 rounded-lg border-2 border-gray-200" placeholder="Phone Number" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex -mx-3">
+                            <div class="w-full px-2 mb-5">
+                                <div class="flex">
+                                    <input type="text" class="w-full pl-10 pr-3 rounded-lg border-2 border-gray-200" placeholder="Ic Number" required>
+                                </div>
+                            </div>
+                            <div class="w-full px-2 mb-5">
+                                <div class="flex">
+                                    <input type="text" class="w-full pl-10 pr-3 rounded-lg border-2 border-gray-200" placeholder="Location" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex -mx-3">
+                            <div class="w-full px-3 mb-5">
+                                <div class="block w-full max-w-xs mx-auto text-white py-3">
+                                    <input type="file" accept="images" class="file-selector-button bg-white text-darkGrayishBlue w-full -ml-10 rounded-lg">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex -mx-3">
+                            <div class="w-full px-3 mb-5">
+                                <ul class="flex flex-wrap items-center justify-center mb-10">
+                                    <button href="/" data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="bg-red text-white text-center font-bold py-2 px-4 rounded-full w-48 drop-shadow-lg" type="button">
+                                        SUBMIT
+                                    </button>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main modal -->
+    <div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
+        <div class="relative w-full h-full max-w-2xl md:h-auto">
+            <!-- Modal content -->
+            <div class="relative bg-transparent">
+                <!-- Modal header -->
+                <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
+                    <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-hide="defaultModal">
+                        <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="p-6 space-y-6">
+                    <img class="object-fill max-w-screen-lg mx-auto my-6 text-center" src="img/thankyou.png" alt=""/>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   <!-- Footer Start -->
+   <footer class="p-4 bg-red left-0 bottom-0 md:flex md:items-center md:justify-between md:p-6">
+    <span class="text-sm text-white md:text-center">
+        <a href="/">Muchico Bakery Sdn Bhd (1198517-U)</a>
+    </span>
+    <ul class="flex flex-wrap items-center mt-3 text-sm text-white dark:text-gray-400 sm:mt-0">
+        <li>
+            <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+        </li>
+        <li>
+            <div class="uppercase dark:white">Find Us Here</div>
+            <div class="flex justify-start space-x-3">
+                <a href="#" title="Facebook" class="flex items-center">
+                    <img src="img/icon-facebook.svg" alt="" class="h-5 rounded-full"/>
+                </a>
+                <a href="#" title="Instagram" class="flex items-center">
+                    <img src="img/icon-instagram.svg" alt="" class="h-5"/>
+                </a>
+                <a href="#" title="Youtube" class="flex items-center">
+                    <img src="img/icon-youtube.svg" alt="" class="h-5"/>
+                </a>
+            </div>
+        </div>
+    </ul>
+</footer>
+<!-- Footer End -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>    
+</body>
+</html>

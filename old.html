@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css" />
+    <script src=”https://cdn.tailwindcss.com”></script>
+    <title>Home</title>
+</head>
+<body>
+    
+    <!-- Navbar Start-->
+    <nav class="bg-red flex mx-auto fixed">
+        <!-- Flex container -->
+        <div class="flex justify-between items-center">
+            <!-- Logo -->
+            <div class="py-2 px-5">
+                <img src="img/logo.png" alt="" />
+            </div>
+
+            <!-- Menu Items -->
+           <div class="hidden space-x-6 md:flex px-7">
+                <button class="cta px-6">
+                    <span class="hover-underline-animation ">
+                        <a href="#" class="text-white font-bold text-lg"> Cast your vote</a>
+                    </span>
+                </button>
+                <button class="cta">
+                    <span class="hover-underline-animation">
+                        <a href="#" class="text-white font-bold text-lg fixed"> Terms & Condition </a>
+                    </span>
+                </button>
+            </div>
+
+            <!-- Hamburger Icon -->
+            <button id="menu-btn" class="block hamburger md:hidden px-6">
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+            </button>
+        </div>
+
+            <!-- Mobile Menu -->
+            <div class="md:hidden">
+                <div id="menu" class="flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+                    <button class="cta px-6">
+                        <span class="hover-underline-animation ">
+                            <a href="#" class="text-white font-bold text-lg"> Cast your vote</a>
+                        </span>
+                    </button>
+                    <button class="cta">
+                        <span class="hover-underline-animation">
+                            <a href="#" class="text-white font-bold text-lg"> Terms & Condition </a>
+                        </span>
+                    </button>
+                </div>
+            </div>
+    </nav>
+    <!-- Navbar End-->
+
+    <!--Hero Start -->
+    <section id="hero">
+        <!-- Banner -->
+        <div class="position-relative bg-white object-cover">
+            <img class="object-fill h-48 w-96" src="img/banner.jpg" alt=""/>
+        </div>
+    </section>
+    <!--Hero End -->
+
+    <!-- Content Section -->
+    <section id="features">
+        <!-- Flex container -->
+        <div class="container flex flex-col px-4 mx-auto py-8 space-y-12 md:space-y-0 md:flex-row">
+          <!-- Video Section -->
+            <div class="video-wrapper flex">
+                <iframe
+                src="https://www.youtube.com/embed/FF3fuYLnApQ"
+                frameborder="6"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+                </iframe>
+            </div>
+  
+            <!-- Heading Right-->
+            <div class="container flex items-center px-6 space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
+                
+                <p class="text-center">
+                 Bersedia untuk merasai kecerian yang tidak terhingga! Dapatkan kroison
+                 7DAYS dan andaa akan berpeluang untuk memenangi hadiah yang bernilai
+                 lebih daripada RM40,000. Hanya imbas, jawab dan rebut peluang untuk 
+                 membawa pulang semua hadiah-hadiah ini. Tunggu apa lagi?
+                 Peraduan berlangsung dari...
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Content End -->
+
+    <!-- Footer -->
+    <footer class="bg-red mx-auto fixed">
+
+        <!-- Flex Container -->
+        <div class="flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0">
+            <!-- Dekstop Footer -->
+            <div class="flex flex-row">
+                <div class="hidden text-white md:block">
+                  Muchico Bakery Sdn Bhd (1198517-U)
+                </div>
+            </div>
+            <div class="flex flex-row">
+            <button class="px-6">
+                <a href="#" class="text-white font-bold text-lg"> Privacy Policy</a>
+            </button>
+            </div>
+            <!-- Mobile Footer -->
+            <div class="flex flex-row items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start">
+                <div class="mx-auto my-6 text-center text-white md:hidden">
+                    Muchico Bakery Sdn Bhd (1198517-U)
+                </div>
+                <!-- Social Links Container -->
+                <div class="flex flex-col">
+                    <a class="text-white font-bold text-lg"> FIND US HERE</a>
+                </div>
+                <div class="flex justify-center space-x-4">
+                  <!-- Link 1 -->
+                  <a href="#">
+                    <img src="img/icon-facebook.svg" alt="" class="h-8" />
+                  </a>
+                  <!-- Link 2 -->
+                  <a href="#">
+                    <img src="img/icon-instagram.svg" alt="" class="h-8" />
+                  </a>
+                  <!-- Link 5 -->
+                  <a href="#">
+                    <img src="img/icon-youtube.svg" alt="" class="h-8" />
+                  </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+</body>
+</html>

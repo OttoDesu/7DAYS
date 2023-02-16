@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css"  rel="stylesheet" />
+    <script src=”https://cdn.tailwindcss.com”></script>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Votes</title>
+</head>
+<body>
+    
+    <nav class="bg-red sm:px-4 py-2.5 mx-auto">
+        <div class="flex flex-wrap items-center justify-between mx-auto">
+          <a href="/" class="flex items-center">
+              <img src="img/logo.png" alt="/" />
+          </a>
+          <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+            <svg class="w-6 h-6" aria-hidden="true" fill="white" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          </button>
+          <div class="hidden cta w-full md:block md:w-auto" id="navbar-default">
+            <ul class="flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
+              <li>
+                <a href="#" style="color:white;" class="block py-2 text-white font-bold text-lg md:hover:bg-transparent md:border-0">BERIKAN UNDI ANDA</a>
+              </li>
+              <li>
+                <a href="#" style="color:white;" class="block py-2 text-white font-bold text-lg md:hover:bg-transparent md:border-0">TERMA DAN SYARAT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <!-- Pin to top left corner -->
+    <div class="relative h-32 w-32 xs:hidden">
+        <div class="absolute left-0 top-0 h-16 w-48">
+            <img src="img/fire-left.png"/>
+        </div>
+    </div>
+
+     <!-- NGO Start -->
+    <section>
+        <!-- Swiper -->
+    <div class="swiper mySwiper py-8">
+        <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <!-- NGO 1 -->
+            <button type="button" onclick="alert('NGO 1')">
+                <div class="ngo-child flex flex-col items-center space-y-6 rounded-lg" >
+                    <div class="ngo-logo flex flex-col items-center rounded-lg" >
+                        <img src="/img/logo-01.png"/>
+                    </div>
+                    <p class="text-sm text-justify">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        <a href="/" class="text-red-700 underline decoration-red-900">
+                            Learn More
+                        </a>
+                    </p>
+                </div>
+            </button>
+        </div>
+        <div class="swiper-slide">
+            <!-- NGO 2 -->
+            <button type="button" onclick="alert('NGO 2')">
+                <div class="ngo-child2 flex flex-col items-center space-y-6 rounded-lg" >
+                    <div class="ngo-logo flex flex-col items-center rounded-lg" >
+                        <img src="/img/logo-02.png"/>
+                    </div>
+                    <p class="text-sm text-white text-justify">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        <a href="/" class="text-red-700 underline decoration-red-900">
+                            Learn More
+                        </a>
+                    </p>
+                </div>
+            </button>
+        </div>
+        <div class="swiper-slide">
+            <!-- NGO 3 -->
+            <button type="button" onclick="alert('NGO 3')">
+                <div class="ngo-child flex flex-col items-center space-y-6 rounded-lg" >
+                    <div class="ngo-logo flex flex-col items-center rounded-lg" >
+                        <img src="/img/logo-03.png"/>
+                    </div>
+                    <p class="text-sm text-justify">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        <a href="/" class="text-red-700 underline decoration-red-900">
+                            Learn More
+                        </a>
+                    </p>
+                </div>
+            </button>
+        </div>
+        
+        </div>
+        
+        <div class="swiper-pagination"></div>
+    </div>
+    </section>
+
+    <div class="choose-ngo mt-10 mb-32">
+        <img class="relative" src="/img/cngo.png" alt=""/>
+        <div class="ngo-text">
+            <h1 class="text-2xl">SAYA PILIH [ORGANIZATION NAME] KERANA…</h1><br>
+            <textarea id="message" rows="4" class="block p-2.5 w-full text-sm text-gray-900 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500  dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
+                <div class="my-6">
+                    <ul class="flex items-center justify-center mb-10">
+                        <a href="/" class="bg-red text-white text-center font-bold py-2 px-4 rounded-full w-48 drop-shadow-lg">
+                        VOTE
+                        </a>
+                    </ul>
+                </div>
+        </div>
+    </div>
+       
+ <!-- Footer Start -->
+ <footer class="p-4 bg-red left-0 bottom-0 md:flex md:items-center md:justify-between md:p-6">
+    <span class="text-sm text-white md:text-center">
+        <a href="/">Muchico Bakery Sdn Bhd (1198517-U)</a>
+    </span>
+    <ul class="flex flex-wrap items-center mt-3 text-sm text-white dark:text-gray-400 sm:mt-0">
+        <li>
+            <a href="#" class="mr-4 hover:underline md:mr-6">Privacy Policy</a>
+        </li>
+        <li>
+            <div class="uppercase dark:white">Find Us Here</div>
+            <div class="flex justify-start space-x-3">
+                <a href="#" title="Facebook" class="flex items-center">
+                    <img src="img/icon-facebook.svg" alt="" class="h-5 rounded-full"/>
+                </a>
+                <a href="#" title="Instagram" class="flex items-center">
+                    <img src="img/icon-instagram.svg" alt="" class="h-5"/>
+                </a>
+                <a href="#" title="Youtube" class="flex items-center">
+                    <img src="img/icon-youtube.svg" alt="" class="h-5"/>
+                </a>
+            </div>
+        </div>
+    </ul>
+</footer>
+<!-- Footer End -->
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 10,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+</html>
