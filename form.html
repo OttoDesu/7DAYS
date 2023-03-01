@@ -1,3 +1,7 @@
+<?php
+   session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +14,8 @@
     <link rel="stylesheet" href="css/main.css" />
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
-    
+
+   
     <title>Form</title>
 </head>
 <body>
@@ -40,7 +45,7 @@
     <div class="flex justify-center items-center w-screen h-screen">
         <!-- COMPONENT CODE -->
         <div class="container mx-auto my-4 px-4 lg:px-20">
-
+<form method="POST" action="connection.php" name = "myForm" onsubmit = "return validate()">
             <div class="w-full p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl bg-gradient">
                 <div class="flex text-center mb-10">
                     <p class="font-bold text-3xl"> 
@@ -48,17 +53,18 @@
                     </p>
                 </div>
                 <div class="grid grid-cols-1 gap-6 md:grid-cols-2 mt-5">
-                    <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none"
-                type="text" placeholder="Name" />
-                    <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none"
-                type="text" placeholder="Phone Number" />
-                    <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none"
-                type="text" placeholder="IC Number" />
-                    <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none"
-                type="text" placeholder="Location" />
-            </div>
-
-            
+                    <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none" id="name" name="name"
+                type="text" placeholder="Nama" required/>
+                    
+                    <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none" id="phone" name="phone"
+                type="text" placeholder="Nombor Telefon" minlength="10" maxlength="11" required/>
+                    
+                    <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none" id="icnumber" name="icnumber"
+                type="text" placeholder="Nombor Kad Pengenalan" required/>
+                    
+                    <input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none" id="poskod" name="poskod"
+                type="text" placeholder="Lokasi" required/>
+            </div>   
 
                 <div class="block w-full max-w-xs mx-auto text-white py-3">
                     <input type="file" accept="images" class="file-selector-button bg-white text-darkGrayishBlue w-full -ml-10 rounded-lg">
@@ -67,19 +73,20 @@
                 <div class="flex -mx-3">
                     <div class="w-full px-3 mb-5">
                         <ul class="flex flex-wrap items-center justify-center mb-10">
-                            <button href="/" data-modal-target="defaultModal" data-modal-toggle="defaultModal" class="bg-red text-white text-center font-bold py-2 px-4 rounded-full w-48 drop-shadow-lg" type="button">
-                                SUBMIT
+                            <button onclick="return validate()" class="bg-red text-white text-center font-bold py-2 px-4 rounded-full w-48 drop-shadow-lg" type="submit">
+                                HANTAR
                             </button>
                         </ul>
                     </div>
                 </div>
             </div>
+</form>
         </div>
         <!-- COMPONENT CODE -->
     </div>
 
     <!-- Main modal -->
-    <div id="defaultModal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
+    <div id="defaultModal" tabindex="-1" aria-hidden="true" class="hidden fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-modal md:h-full">
         <div class="relative w-full h-full max-w-2xl md:h-auto">
             <!-- Modal content -->
             <div class="relative bg-transparent">
@@ -127,6 +134,49 @@
         </ul>
     </footer>
     <!-- Footer End -->
+
+    <script type="text/javascript">
+            function validate() {
+                                  
+                /*var phone = document.getElementById("phone").value
+                var phoneRGEX = /^\d{11}$/;
+                var phoneResult = phoneRGEX.test(phone);
+                if(phoneResult == false){
+
+                 document.getElementById("phone").focus();
+
+                 alert("Please enter your phone number properly.");
+                 return false;
+                }*/
+
+                var IC = document.getElementById("icnumber").value
+                var icRGEX = /^[0-9]{6}[0-9]{2}[0-9]{4}$/;
+                var icResult = icRGEX.test(IC);
+                if(icResult == false){
+
+                 document.getElementById("icnumber").focus();
+
+                 alert("Please enter your ic number properly.");
+                 return false;
+                }
+
+                /*var poskod = document.getElementById("poskod").value
+                var poskodRGEX = /^\d{5}$/;
+                var poskodResult = poskodRGEX.test(poskod);
+                if(poskodResult == false){
+
+                 document.getElementById("poskod").focus();
+
+                 alert("Please enter your poskod properly.");
+                 return false;
+                }*/
+                 
+            //window.onload = function() {
+            //document.forms['myForm'].onclick = validate;
+       // }
+            }
+        </script>
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>    
 </body>
